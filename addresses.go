@@ -1,8 +1,6 @@
 package addresses
 
-import (
-	"github.com/nntaoli-project/GoEx"
-)
+import goex "github.com/nntaoli-project/GoEx"
 
 const (
 	BITFINEX_BTC_IAN = "1JWKguEVBU48za86QPBwqc2FCsQzijPkXD"

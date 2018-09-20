@@ -7,3 +7,5 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/stretchr/testify v1.2.2
 )
+
+replace github.com/nntaoli-project/GoEx => github.com/i0n/GoEx v0.0.0-20180217193507-f60bc546ac01
