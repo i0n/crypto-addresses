@@ -26,115 +26,135 @@ const (
 
 // CryptoAddress stores the address hash and related information.
 type CryptoAddress struct {
-	Currency     goex.Currency
-	Address      string
-	Tag          string
-	ExchangeName string
+	currency     goex.Currency
+	address      string
+	tag          string
+	exchangeName string
+}
+
+// Currency returns the goex currency
+func (c *CryptoAddress) Currency() goex.Currency {
+	return c.currency
+}
+
+// Address returns the address hash as a string
+func (c *CryptoAddress) Address() string {
+	return c.address
+}
+
+// Tag returns the tag as a string
+func (c *CryptoAddress) Tag() string {
+	return c.tag
+}
+
+// ExchangeName returns the exchange name as a string
+func (c *CryptoAddress) ExchangeName() string {
+	return c.exchangeName
 }
 
 var IAN_BITFINEX_EXCHANGE_BTC = CryptoAddress{
-	Currency:     goex.BTC,
-	Address:      BITFINEX_BTC_IAN,
-	Tag:          "I_B_BTC",
-	ExchangeName: "bitfinex.com",
+	currency:     goex.BTC,
+	address:      BITFINEX_BTC_IAN,
+	tag:          "I_B_BTC",
+	exchangeName: "bitfinex.com",
 }
 
 var IAN_BITFINEX_EXCHANGE_BCH = CryptoAddress{
-	Currency:     goex.BCH,
-	Address:      BITFINEX_BCH_IAN,
-	Tag:          "I_B_BCH",
-	ExchangeName: "bitfinex.com",
+	currency:     goex.BCH,
+	address:      BITFINEX_BCH_IAN,
+	tag:          "I_B_BCH",
+	exchangeName: "bitfinex.com",
 }
 
 var IAN_BITFINEX_EXCHANGE_ETC = CryptoAddress{
-	Currency:     goex.ETC,
-	Address:      BITFINEX_ETC_IAN,
-	Tag:          "I_B_ETC",
-	ExchangeName: "bitfinex.com",
+	currency:     goex.ETC,
+	address:      BITFINEX_ETC_IAN,
+	tag:          "I_B_ETC",
+	exchangeName: "bitfinex.com",
 }
 
 var IAN_BITFINEX_EXCHANGE_ETH = CryptoAddress{
-	Currency:     goex.ETH,
-	Address:      BITFINEX_ETH_IAN,
-	Tag:          "I_B_ETH",
-	ExchangeName: "bitfinex.com",
+	currency:     goex.ETH,
+	address:      BITFINEX_ETH_IAN,
+	tag:          "I_B_ETH",
+	exchangeName: "bitfinex.com",
 }
 
 var IAN_BITFINEX_EXCHANGE_LTC = CryptoAddress{
-	Currency:     goex.LTC,
-	Address:      BITFINEX_LTC_IAN,
-	Tag:          "I_B_ETH",
-	ExchangeName: "bitfinex.com",
+	currency:     goex.LTC,
+	address:      BITFINEX_LTC_IAN,
+	tag:          "I_B_ETH",
+	exchangeName: "bitfinex.com",
 }
 
 var IAN_KRAKEN_BTC = CryptoAddress{
-	Currency:     goex.BTC,
-	Address:      KRAKEN_BTC_IAN,
-	Tag:          "I_K_BTC",
-	ExchangeName: "kraken.com",
+	currency:     goex.BTC,
+	address:      KRAKEN_BTC_IAN,
+	tag:          "I_K_BTC",
+	exchangeName: "kraken.com",
 }
 
 var IAN_KRAKEN_BCH = CryptoAddress{
-	Currency:     goex.BCH,
-	Address:      KRAKEN_BCH_IAN,
-	Tag:          "I_K_BCH",
-	ExchangeName: "kraken.com",
+	currency:     goex.BCH,
+	address:      KRAKEN_BCH_IAN,
+	tag:          "I_K_BCH",
+	exchangeName: "kraken.com",
 }
 
 var IAN_KRAKEN_ETC = CryptoAddress{
-	Currency:     goex.ETC,
-	Address:      KRAKEN_ETC_IAN,
-	Tag:          "I_K_ETC",
-	ExchangeName: "kraken.com",
+	currency:     goex.ETC,
+	address:      KRAKEN_ETC_IAN,
+	tag:          "I_K_ETC",
+	exchangeName: "kraken.com",
 }
 
 var IAN_KRAKEN_ETH = CryptoAddress{
-	Currency:     goex.ETH,
-	Address:      KRAKEN_ETH_IAN,
-	Tag:          "I_K_ETH",
-	ExchangeName: "kraken.com",
+	currency:     goex.ETH,
+	address:      KRAKEN_ETH_IAN,
+	tag:          "I_K_ETH",
+	exchangeName: "kraken.com",
 }
 
 var IAN_KRAKEN_LTC = CryptoAddress{
-	Currency:     goex.LTC,
-	Address:      KRAKEN_LTC_IAN,
-	Tag:          "I_K_ETH",
-	ExchangeName: "kraken.com",
+	currency:     goex.LTC,
+	address:      KRAKEN_LTC_IAN,
+	tag:          "I_K_ETH",
+	exchangeName: "kraken.com",
 }
 
 var IAN_OKCOIN_BTC = CryptoAddress{
-	Currency:     goex.BTC,
-	Address:      OKCOIN_BTC_IAN,
-	Tag:          "I_O_BTC",
-	ExchangeName: "okcoin.com",
+	currency:     goex.BTC,
+	address:      OKCOIN_BTC_IAN,
+	tag:          "I_O_BTC",
+	exchangeName: "okcoin.com",
 }
 
 var IAN_OKCOIN_BCH = CryptoAddress{
-	Currency:     goex.BCH,
-	Address:      OKCOIN_BCH_IAN,
-	Tag:          "I_O_BCH",
-	ExchangeName: "okcoin.com",
+	currency:     goex.BCH,
+	address:      OKCOIN_BCH_IAN,
+	tag:          "I_O_BCH",
+	exchangeName: "okcoin.com",
 }
 
 var IAN_OKCOIN_ETC = CryptoAddress{
-	Currency:     goex.ETC,
-	Address:      OKCOIN_ETC_IAN,
-	Tag:          "I_O_ETC",
-	ExchangeName: "okcoin.com",
+	currency:     goex.ETC,
+	address:      OKCOIN_ETC_IAN,
+	tag:          "I_O_ETC",
+	exchangeName: "okcoin.com",
 }
 
 var IAN_OKCOIN_ETH = CryptoAddress{
-	Currency:     goex.ETH,
-	Address:      OKCOIN_ETH_IAN,
-	Tag:          "I_O_ETH",
-	ExchangeName: "okcoin.com",
+	currency:     goex.ETH,
+	address:      OKCOIN_ETH_IAN,
+	tag:          "I_O_ETH",
+	exchangeName: "okcoin.com",
 }
 
 var IAN_OKCOIN_LTC = CryptoAddress{
-	Currency:     goex.LTC,
-	Address:      OKCOIN_LTC_IAN,
-	Tag:          "I_O_ETH",
-	ExchangeName: "okcoin.com",
+	currency:     goex.LTC,
+	address:      OKCOIN_LTC_IAN,
+	tag:          "I_O_ETH",
+	exchangeName: "okcoin.com",
 }
 
 //var Addresses map[string]map[goex.Currency]CryptoAddress
