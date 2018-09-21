@@ -50,105 +50,105 @@ func (c *CryptoAddress) ExchangeName() string {
 	return c.exchangeName
 }
 
-var IAN_BITFINEX_EXCHANGE_BTC = CryptoAddress{
+var IAN_BITFINEX_EXCHANGE_BTC = &CryptoAddress{
 	currency:     goex.BTC,
 	address:      BITFINEX_BTC_IAN,
 	tag:          "I_B_BTC",
 	exchangeName: "bitfinex.com",
 }
 
-var IAN_BITFINEX_EXCHANGE_BCH = CryptoAddress{
+var IAN_BITFINEX_EXCHANGE_BCH = &CryptoAddress{
 	currency:     goex.BCH,
 	address:      BITFINEX_BCH_IAN,
 	tag:          "I_B_BCH",
 	exchangeName: "bitfinex.com",
 }
 
-var IAN_BITFINEX_EXCHANGE_ETC = CryptoAddress{
+var IAN_BITFINEX_EXCHANGE_ETC = &CryptoAddress{
 	currency:     goex.ETC,
 	address:      BITFINEX_ETC_IAN,
 	tag:          "I_B_ETC",
 	exchangeName: "bitfinex.com",
 }
 
-var IAN_BITFINEX_EXCHANGE_ETH = CryptoAddress{
+var IAN_BITFINEX_EXCHANGE_ETH = &CryptoAddress{
 	currency:     goex.ETH,
 	address:      BITFINEX_ETH_IAN,
 	tag:          "I_B_ETH",
 	exchangeName: "bitfinex.com",
 }
 
-var IAN_BITFINEX_EXCHANGE_LTC = CryptoAddress{
+var IAN_BITFINEX_EXCHANGE_LTC = &CryptoAddress{
 	currency:     goex.LTC,
 	address:      BITFINEX_LTC_IAN,
 	tag:          "I_B_ETH",
 	exchangeName: "bitfinex.com",
 }
 
-var IAN_KRAKEN_BTC = CryptoAddress{
+var IAN_KRAKEN_BTC = &CryptoAddress{
 	currency:     goex.BTC,
 	address:      KRAKEN_BTC_IAN,
 	tag:          "I_K_BTC",
 	exchangeName: "kraken.com",
 }
 
-var IAN_KRAKEN_BCH = CryptoAddress{
+var IAN_KRAKEN_BCH = &CryptoAddress{
 	currency:     goex.BCH,
 	address:      KRAKEN_BCH_IAN,
 	tag:          "I_K_BCH",
 	exchangeName: "kraken.com",
 }
 
-var IAN_KRAKEN_ETC = CryptoAddress{
+var IAN_KRAKEN_ETC = &CryptoAddress{
 	currency:     goex.ETC,
 	address:      KRAKEN_ETC_IAN,
 	tag:          "I_K_ETC",
 	exchangeName: "kraken.com",
 }
 
-var IAN_KRAKEN_ETH = CryptoAddress{
+var IAN_KRAKEN_ETH = &CryptoAddress{
 	currency:     goex.ETH,
 	address:      KRAKEN_ETH_IAN,
 	tag:          "I_K_ETH",
 	exchangeName: "kraken.com",
 }
 
-var IAN_KRAKEN_LTC = CryptoAddress{
+var IAN_KRAKEN_LTC = &CryptoAddress{
 	currency:     goex.LTC,
 	address:      KRAKEN_LTC_IAN,
 	tag:          "I_K_ETH",
 	exchangeName: "kraken.com",
 }
 
-var IAN_OKCOIN_BTC = CryptoAddress{
+var IAN_OKCOIN_BTC = &CryptoAddress{
 	currency:     goex.BTC,
 	address:      OKCOIN_BTC_IAN,
 	tag:          "I_O_BTC",
 	exchangeName: "okcoin.com",
 }
 
-var IAN_OKCOIN_BCH = CryptoAddress{
+var IAN_OKCOIN_BCH = &CryptoAddress{
 	currency:     goex.BCH,
 	address:      OKCOIN_BCH_IAN,
 	tag:          "I_O_BCH",
 	exchangeName: "okcoin.com",
 }
 
-var IAN_OKCOIN_ETC = CryptoAddress{
+var IAN_OKCOIN_ETC = &CryptoAddress{
 	currency:     goex.ETC,
 	address:      OKCOIN_ETC_IAN,
 	tag:          "I_O_ETC",
 	exchangeName: "okcoin.com",
 }
 
-var IAN_OKCOIN_ETH = CryptoAddress{
+var IAN_OKCOIN_ETH = &CryptoAddress{
 	currency:     goex.ETH,
 	address:      OKCOIN_ETH_IAN,
 	tag:          "I_O_ETH",
 	exchangeName: "okcoin.com",
 }
 
-var IAN_OKCOIN_LTC = CryptoAddress{
+var IAN_OKCOIN_LTC = &CryptoAddress{
 	currency:     goex.LTC,
 	address:      OKCOIN_LTC_IAN,
 	tag:          "I_O_ETH",
@@ -159,7 +159,7 @@ var IAN_OKCOIN_LTC = CryptoAddress{
 //var BitfinexAddresses map[goex.Currency]CryptoAddress
 //Addresses = make(map[string]map[goex.Currency]CryptoAddress)
 
-var BitfinexAddresses = map[goex.Currency]CryptoAddress{
+var BitfinexAddresses = map[goex.Currency]*CryptoAddress{
 	goex.BTC: IAN_BITFINEX_EXCHANGE_BTC,
 	goex.BCH: IAN_BITFINEX_EXCHANGE_BCH,
 	goex.ETC: IAN_BITFINEX_EXCHANGE_ETC,
@@ -167,7 +167,7 @@ var BitfinexAddresses = map[goex.Currency]CryptoAddress{
 	goex.LTC: IAN_BITFINEX_EXCHANGE_LTC,
 }
 
-var KrakenAddresses = map[goex.Currency]CryptoAddress{
+var KrakenAddresses = map[goex.Currency]*CryptoAddress{
 	goex.BTC: IAN_KRAKEN_BTC,
 	goex.BCH: IAN_KRAKEN_BCH,
 	goex.ETC: IAN_KRAKEN_ETC,
@@ -175,7 +175,7 @@ var KrakenAddresses = map[goex.Currency]CryptoAddress{
 	goex.LTC: IAN_KRAKEN_LTC,
 }
 
-var OkcoinAddresses = map[goex.Currency]CryptoAddress{
+var OkcoinAddresses = map[goex.Currency]*CryptoAddress{
 	goex.BTC: IAN_OKCOIN_BTC,
 	goex.BCH: IAN_OKCOIN_BCH,
 	goex.ETC: IAN_OKCOIN_ETC,
@@ -183,7 +183,7 @@ var OkcoinAddresses = map[goex.Currency]CryptoAddress{
 	goex.LTC: IAN_OKCOIN_LTC,
 }
 
-var All = map[string]map[goex.Currency]CryptoAddress{
+var All = map[string]map[goex.Currency]*CryptoAddress{
 	"bitfinex.com": BitfinexAddresses,
 	"kraken.com":   KrakenAddresses,
 	"okcoin.com":   OkcoinAddresses,
